@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balancing Chemical Equations Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212; /* Deep dark background */
+            color: #e0e0e0; /* Light text */
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #f08080, #ffd700, #98fb98); /* Example vibrant gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .code-highlight {
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+        .question-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .question-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        .step-number {
+            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            font-weight: bold;
+            font-size: 1.5em;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Outfit', 'sans-serif']
+                    },
+                    colors: {
+                        'primary-dark': '#121212',
+                        'secondary-dark': '#1E1E1E',
+                        'accent-vibrant': '#00bcd4', /* Cyan accent */
+                        'accent-glow': '#ff5722', /* Orange accent */
+                        'text-primary': '#e0e0e0',
+                        'text-secondary': '#b0b0b0',
+                        'border-glass': 'rgba(255, 255, 255, 0.1)',
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.3)',
+                        'card-hover': '0 15px 30px rgba(0, 0, 0, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary-dark text-text-primary p-6 md:p-12 antialiased">
+
+    <header class="text-center mb-16">
+        <h1 class="text-5xl md:text-7xl font-display font-bold mb-4 text-transparent gradient-text">
+            BALANCING CHEMICAL EQUATIONS
+        </h1>
+        <p class="text-xl md:text-2xl font-sans font-light text-text-secondary">
+            A Comprehensive Guide for Class 10
+        </p>
+    </header>
+
+    <main class="container mx-auto">
+        <section class="mb-16 glassmorphism p-8 md:p-12 shadow-glass">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-6 text-accent-vibrant">
+                INTRODUCTION: WHY DO WE BALANCE CHEMICAL EQUATIONS?
+            </h2>
+            <p class="text-lg md:text-xl leading-relaxed mb-4">
+                A chemical equation represents a chemical reaction using symbols and formulas. We balance it to satisfy the <strong class="text-accent-glow font-semibold">Law of Conservation of Mass</strong>, which states that mass can neither be created nor destroyed in a chemical reaction. According to this law, the total mass of the elements on the reactant side (left side) must be equal to the total mass of the elements on the product side (right side). This means the number of atoms of each element must remain the same before and after the reaction.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <h3 class="text-3xl md:text-4xl font-display font-bold mb-6 text-center text-accent-vibrant">
+                IMPORTANT TECHNICAL TERMS
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glassmorphism p-8 shadow-glass">
+                    <h4 class="text-2xl font-display font-semibold mb-4 text-accent-glow">1. Reactants</h4>
+                    <p class="text-lg text-text-secondary">These are the starting substances in a chemical reaction, written on the left-hand side of the arrow.</p>
+                </div>
+                <div class="glassmorphism p-8 shadow-glass">
+                    <h4 class="text-2xl font-display font-semibold mb-4 text-accent-glow">2. Products</h4>
+                    <p class="text-lg text-text-secondary">These are the new substances formed as a result of the reaction, written on the right-hand side of the arrow.</p>
+                </div>
+                <div class="glassmorphism p-8 shadow-glass">
+                    <h4 class="text-2xl font-display font-semibold mb-4 text-accent-glow">3. Skeletal Chemical Equation</h4>
+                    <p class="text-lg text-text-secondary">An unbalanced equation that only lists the formulas of the reactants and products without correct proportions.</p>
+                </div>
+                <div class="glassmorphism p-8 shadow-glass">
+                    <h4 class="text-2xl font-display font-semibold mb-4 text-accent-glow">4. Coefficients</h4>
+                    <p class="text-lg text-text-secondary">These are the whole numbers placed in front of a chemical formula (e.g., <span class="code-highlight">2</span> in <span class="code-highlight">2H₂O</span>) to balance the equation. They represent the number of molecules or atoms involved.</p>
+                </div>
+                <div class="glassmorphism p-8 shadow-glass col-span-1 md:col-span-2">
+                    <h4 class="text-2xl font-display font-semibold mb-4 text-accent-glow">5. Subscripts</h4>
+                    <p class="text-lg text-text-secondary">
+                        These are the small numbers written at the bottom right of an element symbol (e.g., <span class="code-highlight">2</span> in <span class="code-highlight">H₂</span>) indicating the number of atoms of that element within a single molecule.
+                        <strong class="text-red-400 font-semibold block mt-2">You must NEVER change subscripts while balancing because that would change the identity of the chemical compound itself.</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 glassmorphism p-8 md:p-12 shadow-glass">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-6 text-accent-vibrant">
+                THE HIT AND TRIAL METHOD: A STEP-BY-STEP PROCESS
+            </h2>
+            <p class="text-lg md:text-xl leading-relaxed mb-8">
+                The simplest way to balance an equation is the Hit and Trial method. We use this method because we try different coefficients until the number of atoms on both sides is equal.
+            </p>
+
+            <div class="space-y-8">
+                <div>
+                    <span class="step-number">1</span>
+                    <span class="text-xl font-semibold">Write the skeletal equation.</span>
+                    <p class="text-lg text-text-secondary mt-2">Let's take the reaction of iron with steam:</p>
+                    <p class="text-xl font-mono text-accent-glow code-highlight my-3 p-3 bg-secondary-dark w-fit">Fe + H₂O -> Fe₃O₄ + H₂</p>
+                </div>
+                <div>
+                    <span class="step-number">2</span>
+                    <span class="text-xl font-semibold">Compare the number of atoms of each element on both sides.</span>
+                    <p class="text-lg text-text-secondary mt-2">
+                        Left Side (Reactants): Fe = 1, H = 2, O = 1<br>
+                        Right Side (Products): Fe = 3, H = 2, O = 4
+                    </p>
+                </div>
+                <div>
+                    <span class="step-number">3</span>
+                    <span class="text-xl font-semibold">Pick the compound with the maximum number of atoms.</span>
+                    <p class="text-lg text-text-secondary mt-2">
+                        It is often easiest to start with the compound that has the most atoms. In our example, <span class="code-highlight">Fe₃O₄</span> contains the most atoms (3 Fe and 4 O).
+                    </p>
+                    <p class="text-lg text-text-secondary mt-2">
+                        To balance Oxygen: There are 4 oxygen atoms on the right and only 1 on the left. To balance them, we place the coefficient <span class="code-highlight">4</span> in front of <span class="code-highlight">H₂O</span> on the left side.
+                    </p>
+                    <p class="text-xl font-mono text-accent-glow code-highlight my-3 p-3 bg-secondary-dark w-fit">Fe + <span class="text-red-400">4</span>H₂O -> Fe₃O₄ + H₂</p>
+                </div>
+                <div>
+                    <span class="step-number">4</span>
+                    <span class="text-xl font-semibold">Balance the next element (Iron).</span>
+                    <p class="text-lg text-text-secondary mt-2">
+                        There are 3 iron atoms on the right and only 1 on the left. We place the coefficient <span class="code-highlight">3</span> in front of <span class="code-highlight">Fe</span> on the left side.
+                    </p>
+                    <p class="text-xl font-mono text-accent-glow code-highlight my-3 p-3 bg-secondary-dark w-fit"><span class="text-red-400">3</span>Fe + 4H₂O -> Fe₃O₄ + H₂</p>
+                </div>
+                <div>
+                    <span class="step-number">5</span>
+                    <span class="text-xl font-semibold">Balance the final element (Hydrogen).</span>
+                    <p class="text-lg text-text-secondary mt-2">
+                        On the left side, we now have 8 hydrogen atoms (4 molecules of H₂O, each with 2 atoms: 4 x 2 = 8). On the right side, we have only 2 hydrogen atoms in H₂. To make them 8, we place the coefficient <span class="code-highlight">4</span> in front of <span class="code-highlight">H₂</span>.
+                    </p>
+                    <p class="text-xl font-mono text-accent-glow code-highlight my-3 p-3 bg-secondary-dark w-fit">3Fe + 4H₂O -> Fe₃O₄ + <span class="text-red-400">4</span>H₂</p>
+                </div>
+                <div>
+                    <span class="step-number">6</span>
+                    <span class="text-xl font-semibold">Check the correctness.</span>
+                    <p class="text-lg text-text-secondary mt-2">
+                        Count the atoms again to ensure they are the same on both sides.
+                    </p>
+                    <p class="text-lg text-text-secondary mt-2">
+                        Left Side: Fe = 3, H = 8, O = 4<br>
+                        Right Side: Fe = 3, H = 8, O = 4
+                    </p>
+                    <p class="text-lg font-semibold text-green-400 mt-2">The equation is now balanced.</p>
+                </div>
+                <div>
+                    <span class="step-number">7</span>
+                    <span class="text-xl font-semibold">Representing physical states.</span>
+                    <p class="text-lg text-text-secondary mt-2">
+                        To make the equation more informative, we add symbols in parentheses: <span class="code-highlight">(s)</span> for solid, <span class="code-highlight">(l)</span> for liquid, <span class="code-highlight">(g)</span> for gas, and <span class="code-highlight">(aq)</span> for aqueous (dissolved in water).
+                    </p>
+                    <p class="text-xl font-mono text-accent-glow code-highlight my-3 p-3 bg-secondary-dark w-fit">
+                        3Fe(s) + 4H₂O(g) -> Fe₃O₄(s) + 4H₂(g)
+                    </p>
+                    <p class="text-sm text-text-secondary">
+                        Note: H₂O is marked <span class="code-highlight">(g)</span> here because it is in the form of steam.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-4xl md:text-5xl font-display font-bold mb-10 text-center text-transparent gradient-text">
+                10 PROBABLE QUESTIONS
+            </h2>
+            <p class="text-xl text-center text-text-secondary mb-12">
+                (For Periodic Test, Class 10 NCERT Standards)
+            </p>
+
+            <div class="grid grid-cols-1 gap-8">
+                <div class="glassmorphism p-8 shadow-glass">
+                    <h3 class="text-3xl font-display font-semibold mb-6 text-accent-vibrant">Multiple Choice Questions (1 Mark Each)</h3>
+                    <div class="space-y-6">
+                        <div class="question-card glassmorphism p-6 shadow-glass">
+                            <p class="text-lg mb-3">1. Which of the following represents the correct balanced equation for the reaction of magnesium with oxygen?</p>
+                            <div class="flex flex-col space-y-2 ml-4">
+                                <p class="text-text-secondary">A. Mg + O₂ -> MgO</p>
+                                <p class="text-accent-glow font-semibold">B. 2Mg + O₂ -> 2MgO</p>
+                                <p class="text-text-secondary">C. Mg + 2O₂ -> MgO₂</p>
+                                <p class="text-text-secondary">D. 2Mg + 2O -> 2MgO</p>
+                            </div>
+                        </div>
+                        <div class="question-card glassmorphism p-6 shadow-glass">
+                            <p class="text-lg mb-3">2. To balance the following equation: N₂ + H₂ -> NH₃, the coefficients in front of N₂, H₂, and NH₃ should be:</p>
+                            <div class="flex flex-col space-y-2 ml-4">
+                                <p class="text-text-secondary">A. 1, 1, 1</p>
+                                <p class="text-accent-glow font-semibold">B. 1, 3, 2</p>
+                                <p class="text-text-secondary">C. 2, 3, 2</p>
+                                <p class="text-text-secondary">D. 1, 2, 3</p>
+                            </div>
+                        </div>
+                        <div class="question-card glassmorphism p-6 shadow-glass">
+                            <p class="text-lg mb-3">3. What is the physical state of water when it is labeled as (aq) in a chemical equation?</p>
+                            <div class="flex flex-col space-y-2 ml-4">
+                                <p class="text-text-secondary">A. It is in the form of steam.</p>
+                                <p class="text-accent-glow font-semibold">B. It is the solvent in which a substance is dissolved.</p>
+                                <p class="text-text-secondary">C. It is purely in the liquid state.</p>
+                                <p class="text-text-secondary">D. It is in the form of ice.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glassmorphism p-8 shadow-glass">
+                    <h3 class="text-3xl font-display font-semibold mb-6 text-accent-vibrant">Short Answer Questions (2 to 3 Marks Each)</h3>
+                    <div class="space-y-6">
+                        <div class="question-card glassmorphism p-6 shadow-glass">
+                            <p class="text-lg mb-3">4. State the Law of Conservation of Mass and explain its significance in balancing a chemical equation.</p>
+                            <p class="text-lg text-text-secondary italic">Answer involves stating the law and its direct relation to atom count in equations.</p>
+                        </div>
+                        <div class="question-card glassmorphism p-6 shadow-glass">
+                            <p class="text-lg mb-3">5. Balance the following chemical equations:</p>
+                            <div class="flex flex-col space-y-3 ml-4">
+                                <p class="text-text-secondary"> (i) HNO₃ + Ca(OH)₂ -> Ca(NO₃)₂ + H₂O</p>
+                                <p class="text-accent-glow font-semibold">Ans: 2HNO₃ + Ca(OH)₂ -> Ca(NO₃)₂ + 2H₂O</p>
+                                <p class="text-text-secondary"> (ii) NaOH + H₂SO₄ -> Na₂SO₄ + H₂O</p>
+                                <p class="text-accent-glow font-semibold">Ans: 2NaOH + H₂SO₄ -> Na₂SO₄ + 2H₂O</p>
+                            </div>
+                        </div>
+                        <div class="question-card glassmorphism p-6 shadow-glass">
+                            <p class="text-lg mb-3">6. Write the balanced chemical equation representing the reaction of Lead (II) nitrate with Potassium iodide to produce Lead iodide and Potassium nitrate.</p>
+                            <p class="text-lg text-text-secondary italic">Reactants: Pb(NO₃)₂ and KI. Products: PbI₂ and KNO₃.</p>
+                            <p class="text-accent-glow font-semibold">Ans: Pb(NO₃)₂(aq) + 2KI(aq) -> PbI₂(s) + 2KNO₃(aq)</p>
+                        </div>
+                        <div class="question-card glassmorphism p-6 shadow-glass">
+                            <p class="text-lg mb-3">7. Why can we not balance a chemical equation by changing the subscripts of the reactants or products? Explain with an example.</p>
+                            <p class="text-lg text-text-secondary italic">Answer explains that changing subscripts changes the chemical identity (e.g., H₂O vs H₂O₂), which is not allowed.</p>
+                        </div>
+                        <div class="question-card glassmorphism p-6 shadow-glass">
+                            <p class="text-lg mb-3">8. Translate the following statement into a balanced chemical equation: Barium chloride reacts with aluminum sulfate to give aluminum chloride and a precipitate of barium sulfate.</p>
+                            <p class="text-lg text-text-secondary italic">Reactants: BaCl₂ and Al₂(SO₄)₃. Products: AlCl₃ and BaSO₄.</p>
+                            <p class="text-accent-glow font-semibold">Ans: 3BaCl₂(aq) + Al₂(SO₄)₃(aq) -> 2AlCl₃(aq) + 3BaSO₄(s)</p>
+                        </div>
+                        <div class="question-card glassmorphism p-6 shadow-glass">
+                            <p class="text-lg mb-3">9. Balance the following and mention physical states: Methane (CH₄) gas burns in the presence of oxygen gas to produce carbon dioxide gas and water vapor.</p>
+                            <p class="text-accent-glow font-semibold">Ans: CH₄(g) + 2O₂(g) -> CO₂(g) + 2H₂O(g)</p>
+                        </div>
+                        <div class="question-card glassmorphism p-6 shadow-glass">
+                            <p class="text-lg mb-3">10. Identify the reactants and products in the reaction: Calcium oxide + Water -> Calcium hydroxide. Also, write its balanced chemical equation mentioning physical states.</p>
+                            <p class="text-lg text-text-secondary italic">Reactants: CaO, H₂O. Product: Ca(OH)₂.</p>
+                            <p class="text-accent-glow font-semibold">Ans: CaO(s) + H₂O(l) -> Ca(OH)₂(aq)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center text-lg text-text-secondary py-12">
+            <p>This concludes the explanation and the list of probable test questions for Class 10 Chemistry.</p>
+            <p class="mt-3 font-semibold text-accent-glow">Remember to always double-check the final count of atoms on both sides carefully!</p>
+        </section>
+    </main>
+
+    <script>
+        // Optional: Add subtle animation on load or specific elements if needed.
+        // For this static page, animations are primarily CSS-driven on hover.
+    </script>
+</body>
+</html>
